@@ -2,43 +2,43 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
         <meta name ="author" content="Catherine Assa">
         <meta name = "description" content="Catherine Personal Homepage">
         <title>
             Home | Catherine Personal Homepage
         </title>
-        <link rel = "icon" href="Home.png" type = "image/x-icon">
+        <link rel = "icon" href="Foto/icon/Home.png" type = "image/x-icon">
         <link rel="stylesheet" href="style.css">
+        <!-- link untuk icon -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     </head>
 
     <body>
+        <!---bagian menu-->
         <nav>
             <div class="wrapper">
                 <div class="logo">
                     <a href="index.html" target="Home">CatherineHomepage</a>
                 </div>
-                <div class="menu">
-                    <ul>
-                        <li>
-                            <a href="index.html" target="Home">Home</a>
-                        </li>
-                        <li>
-                            <a href="gallery.html" target="Gallery">Gallery</a>
-                        </li>
-                        <li>
-                            <a href="blog.html" target="Blog">Blog</a>
-                        </li>
-                        <li>
-                            <a href="contact.html" target="Contact">Contact</a>
-                        </li>
-                    </ul>
-                </div>
+                <i class="fa-solid fa-bars" id="sidebutton"></i>
+                <ul class="menu">
+                    <li><a href="index.html" target="Home">Home</a></li>
+                    <li><a href="gallery.html" target="Gallery">Gallery</a></li>
+                    <li><a href="blog.html" target="Blog">Blog</a></li>
+                    <li><a href="contact.html" target="Contact">Contact</a></li>
+                </ul>
             </div>
         </nav>
 
+        <!---bagian home-->
         <section class="home" id="home">
+            <div class="foto-saya">
+                <img src="foto/foto1.png" alt="" id="foto1">
+            </div>
             <div class="home-text">
-                <h2>Hello, I'm Catherine Assa</h2>
+                <h3><div id="text"></div></h3>
+                <h2>I'm Catherine Assa</h2>
                 <p>
                     I'm studying Informatics Engineering at Sam Ratulangi University. 
                     I really enjoy learning about design and creating games. 
@@ -47,5 +47,6 @@
                 </p>
             </div>
         </section>
+        <script src="main.js"></script>
     </body>
 </html>

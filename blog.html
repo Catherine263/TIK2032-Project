@@ -7,45 +7,36 @@
         <title>
             Blog | Catherine Personal Homepage
         </title>
-        <link rel = "icon" href="Blog.png" type = "image/x-icon">
+        <link rel = "icon" href="foto/icon/Gallery.png" type = "image/x-icon">
         <link rel="stylesheet" href="style.css">
+        <!-- link untuk icon -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     </head>
 
     <body>
+        <!---bagian menu-->
         <nav>
             <div class="wrapper">
                 <div class="logo">
                     <a href="index.html" target="Home">CatherineHomepage</a>
                 </div>
-                <div class="menu">
-                    <ul>
-                        <li>
-                            <a href="index.html" target="Home">Home</a>
-                        </li>
-                        <li>
-                            <a href="gallery.html" target="Gallery">Gallery</a>
-                        </li>
-                        <li>
-                            <a href="blog.html" target="Blog">Blog</a>
-                        </li>
-                        <li>
-                            <a href="contact.html" target="Contact">Contact</a>
-                        </li>
-                    </ul>
-                </div>
+                <i class="fa-solid fa-bars" id="sidebutton"></i>
+                <ul class="menu">
+                    <li><a href="index.html" target="Home">Home</a></li>
+                    <li><a href="gallery.html" target="Gallery">Gallery</a></li>
+                    <li><a href="blog.html" target="Blog">Blog</a></li>
+                    <li><a href="contact.html" target="Contact">Contact</a></li>
+                </ul>
             </div>
         </nav>
 
+        <!---bagian blog--->
         <section class="blog" id="blog">
             <div class="blog-text">
                 <h2>
                     My Blog's
                 </h2>
-            </div>
-        </section>
-
-        <section class="fox" id="fox">
-            <div class="fox-text">
+                <!-- blog Fox -->
                 <h3>
                     Red Fox (Rubah Merah)
                 </h3>
@@ -61,11 +52,7 @@
                     Mereka juga beradaptasi dengan baik terhadap lingkungan manusia seperti pertanian, daerah pinggiran kota, dan bahkan komunitas besar. 
                     Kecerdasan rubah merah membuatnya mendapatkan reputasi legendaris karena kecerdasan dan kelicikannya.
                 </p>
-            </div>
-        </section>
-
-        <section class="husky" id="husky">
-            <div class="husky-text">
+                <!-- blog husky -->
                 <h3>
                     Siberian Husky (Husky)
                 </h3>
@@ -84,11 +71,7 @@
                     Faktanya, kecerdasan mereka adalah salah satu sifat mereka yang paling menonjol. 
                     Karena mereka lebih suka bersama “kawanan”, yang terbaik adalah menjadikan husky sebagai anjing keluarga.
                 </p>
-            </div>
-        </section>
-
-        <section class="panther" id="panther">
-            <div class="panther-text">
+                <!-- blog panther -->
                 <h3>
                     Panther (Macan kumbang)
                 </h3>
@@ -112,5 +95,6 @@
                 </P>
             </div>
         </section>
+        <script src="main.js"></script>
     </body>
 </html>

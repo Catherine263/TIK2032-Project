@@ -9,30 +9,24 @@
         </title>
         <link rel = "icon" href="Contact.png" type = "image/x-icon">
         <link rel="stylesheet" href="style.css">
+        <!-- link untuk icon -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     </head>
 
     <body>
+        <!---bagian menu-->
         <nav>
             <div class="wrapper">
                 <div class="logo">
                     <a href="index.html" target="Home">CatherineHomepage</a>
                 </div>
-                <div class="menu">
-                    <ul>
-                        <li>
-                            <a href="index.html" target="Home">Home</a>
-                        </li>
-                        <li>
-                            <a href="gallery.html" target="Gallery">Gallery</a>
-                        </li>
-                        <li>
-                            <a href="blog.html" target="Blog">Blog</a>
-                        </li>
-                        <li>
-                            <a href="contact.html" target="Contact">Contact</a>
-                        </li>
-                    </ul>
-                </div>
+                <i class="fa-solid fa-bars" id="sidebutton"></i>
+                <ul class="menu">
+                    <li><a href="index.html" target="Home">Home</a></li>
+                    <li><a href="gallery.html" target="Gallery">Gallery</a></li>
+                    <li><a href="blog.html" target="Blog">Blog</a></li>
+                    <li><a href="contact.html" target="Contact">Contact</a></li>
+                </ul>
             </div>
         </nav>
 
@@ -41,16 +35,19 @@
                 <h2>
                     My Contacts
                 </h2>
-                <a href="https://www.instagram.com/catherinemariaa123/">
-                    <img src="instagram.png" width="10%">
-                </a>
-                <a href="https://www.linkedin.com/in/catherine-assa-5820532b7/">
-                    <img src="linkedin.png" width="10%">
-                </a>
-                <a href="https://github.com/Catherine263">
-                    <img src="github.png" width="10%">
-                </a>
+                <div class="contact-icon">
+                    <a href="https://www.instagram.com/catherinemariaa123/">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/catherine-assa-5820532b7/">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/Catherine263">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
             </div>
         </section>
+        <script src="main.js"></script>
     </body>
 </html>
