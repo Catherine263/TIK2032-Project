@@ -18,13 +18,13 @@ $blogId = isset($_GET['id']) ? intval($_GET['id']) : 0;
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name ="author" content="Catherine Assa">
         <meta name = "description" content="Catherine Contact">
         <title>
-            Contact | Catherine Personal Homepage
+            Blog | Catherine Personal Homepage
         </title>
-        <link rel = "icon" href="Contact.png" type = "image/x-icon">
+        <link rel = "icon" href="foto/icon/Blog.png" type = "image/x-icon">
         <link rel="stylesheet" href="style.css">
         <!-- link untuk icon -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
