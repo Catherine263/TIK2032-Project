@@ -9,6 +9,7 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
+    transition: all 0.3s ease;
 }
 
 :root {
@@ -16,6 +17,7 @@
     --font-color: #538296;
     --menu-color: #77b7d3;
     --bar-color: #ffffff;
+    --highlight-color: #a2d5f2;
 }
 
 body {
@@ -67,7 +69,7 @@ nav .menu li a.active {
     color: var(--font-color);
     font-size: 2.6rem;
     display: none;
-    transition: 0.5s;
+    transition: color 0.3s ease;
 }
 
 section {
@@ -147,33 +149,110 @@ section {
 }
 
 /*css dari blog.html*/
+.blog-text p.tanggal-upload {
+    color: #666; /* Warna teks */
+    font-size: 14px; /* Ukuran teks */
+    margin-bottom: 10px; /* Jarak antara teks dengan teks di atasnya */
+}
+
 .blog-text {
-    text-align: justify;
+    background-color: #fff;
+    padding: 3rem 4rem;
+    margin: 2rem auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 800px;
 }
 
 .blog-text h2 {
-    font-family: 'Didot';
+    font-family: 'Didot', serif;
     font-weight: 800;
     font-size: 45px;
     color: var(--font-color);
     margin-bottom: 2rem;
     text-align: center;
+    position: relative;
+}
+
+.blog-text h2::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background-color: var(--highlight-color);
+    display: block;
+    margin: 10px auto;
 }
 
 .blog-text h3 {
-    font-family: 'Didot';
+    font-family: 'Didot', serif;
     font-weight: 800;
-    font-size: 35px;
+    font-size: 30px;
     color: var(--font-color);
     margin-top: 2rem;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.blog-text h3::before {
+    content: "";
+    width: 50px;
+    height: 3px;
+    background-color: var(--highlight-color);
+    display: block;
     margin-bottom: 10px;
 }
 
 .blog-text p {
-    line-height: 28px;
-    font-weight: 500;
+    line-height: 1.8;
+    font-weight: 400;
+    color: #666;
     text-align: justify;
-    margin-bottom: .3rem;
+    margin-bottom: 1rem;
+    font-family: "Roboto Slab", serif;
+}
+
+.blog-text img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* CSS untuk bagian "Show All" */
+.show-all-button {
+    display: block; 
+    margin: 0 auto;
+    background-color: #538296;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+/* CSS untuk bagian back button */
+.back-button {
+    margin-top: 100px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: #007BFF;
+    text-decoration: none;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    color: #0056b3;
+}
+
+#backbutton {
+    font-size: 24px;
 }
 
 /*css dari contact.html*/
@@ -260,6 +339,7 @@ section {
         font-size: 1.5rem;
         margin: 5rem 0;
         text-align: center;
+        transition: color 0.3s ease;
     }
 
     /*--- bagian home ---*/

@@ -47,3 +47,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     typeText();
 });
+
+/*----- bagian animasi Text -----*/
+document.addEventListener('DOMContentLoaded', function() {
+    const showAllButtons = document.querySelectorAll('.show-all-button');
+
+    showAllButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const blogId = button.dataset.blogId;
+            // Redirect ke halaman PHP dengan meneruskan ID blog
+            window.location.href = `index.php?id=${blogId}`;
+        });
+    });
+});
