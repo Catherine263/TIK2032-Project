@@ -1,19 +1,17 @@
 <?php
-// Lakukan koneksi ke database (sesuaikan dengan informasi koneksi Anda)
+// Koneksi Database
 $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "blog_database";
 
-// Buat koneksi
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Periksa koneksi
 if ($conn->connect_error) {
     die("Koneksi gagal: " . $conn->connect_error);
 }
 
-// Ambil ID blog dari parameter URL
+// bagian mengambil ID blog dari parameter URL
 $blogId = isset($_GET['id']) ? intval($_GET['id']) : 0;
 ?>
 
@@ -49,7 +47,7 @@ $blogId = isset($_GET['id']) ? intval($_GET['id']) : 0;
     </nav>
 
     <?php if ($blogId > 0): ?>
-        <!-- Tambahkan tombol back di sini -->
+        <!-- bagian tombol kembali -->
         <a href="index.php" class="back-button" title="Back"><i class="fa-solid fa-arrow-left" id="backbutton"></i></a>
     <?php endif; ?>
 
@@ -58,12 +56,10 @@ $blogId = isset($_GET['id']) ? intval($_GET['id']) : 0;
         <div class="blog-text">
             <?php
             if ($blogId > 0) {
-                // Ambil data blog dari database berdasarkan ID
                 $sql = "SELECT * FROM posts_blog WHERE id = $blogId";
                 $result = $conn->query($sql);
 
                 if ($result->num_rows > 0) {
-                    // Output data dari setiap baris
                     while($row = $result->fetch_assoc()) {
                         echo "<h2>" . htmlspecialchars($row["judul"]) . "</h2>";
                         echo "<p>Tanggal Upload: " . htmlspecialchars($row["tgl_up"]) . "</p>";
@@ -74,10 +70,9 @@ $blogId = isset($_GET['id']) ? intval($_GET['id']) : 0;
                     echo "Blog tidak ditemukan.";
                 }
             } else {
-                // Tampilkan ringkasan blog
+                // bagian ringkasan blog
                 echo "<h2>My Blog's</h2>";
 
-                // Ambil ringkasan dari database
                 $sql = "SELECT id, gambar, judul, SUBSTRING(isi_blog, 1, 200) as ringkasan, tgl_up FROM posts_blog";
                 $result = $conn->query($sql);
 
@@ -102,6 +97,5 @@ $blogId = isset($_GET['id']) ? intval($_GET['id']) : 0;
 </html>
 
 <?php
-// Tutup koneksi
 $conn->close();
 ?>
